@@ -18,9 +18,7 @@ body {
   width: 500px;
 height: 500px;
 	 background: #E5D352;
-	-moz-border-radius: 250px;
-	-webkit-border-radius: 250px;
-	border-radius: 250px;
+
 }
 
 h1 {
@@ -59,7 +57,6 @@ p {
 }
 
 #status {
-  background: #D9E76C;
   padding: 10px;
 }
 
@@ -77,8 +74,9 @@ parent {
 }
 
 .message,.message-1 {
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
+    align-content: center;
     background-color: orange;
     color: white;
     z-index: -9999;
@@ -87,7 +85,47 @@ parent {
     font-family: Arial, sans-serif;
     font-weight: bold;
 
-    -webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
 }
+
+.tabelle {
+	width: 200px; border-collapse: collapse; 
+}
+.zelle{
+	padding: 3px; 
+	background-color: SkyBlue; 
+	font-family: Verdana; 
+	font-size: 12px;
+	text-align: center; 
+	color: Black; 
+}
+th {
+	background-color: SteelBlue;
+	padding: 3px; 
+	color: White; 
+	font-size: 12px;
+	font-family: Verdana; 
+}
+td {
+	background-color: SteelBlue;
+	padding: 3px; 
+	color: White; 
+	font-size: 12px;
+	font-family: Verdana; 
+}
+.separate {
+	border-radius: 10px;
+	border-spacing: 0;
+	border-collapse: separate;
+}
+.separate td, table.separate th {
+	border-bottom: 1px solid PaleVioletRed;
+	border-right: 1px solid PaleVioletRed;
+}
+.separate tr:last-child td:first-child {
+	border-bottom-left-radius: 10px;
+
+
+

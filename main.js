@@ -108,14 +108,26 @@ function show_status(text_bold, text_normal) {
 
     function addRecordToHistory(userInput, correctNumbers, correctPositions) { 
     var $div =$('<div class="message">');
-    var $tr = $("<tr>");
-    //$tbody =$("#history_table tbody");
+    var $tr = $("<div>");
+    $tbody =          $(`<table id="hintsTable " class=" w3-tiny">
+            <thead>
+              <tr>
+                <th>Your Number</th>
+                <th>Correct Digits</th>
+                <th>Correct Positions</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>`);
     //$tr.append($("<td>", {text: $("tr", $tbody).length + 1}));
-    $tr.append($("<td>", {text: userInput}));
-    $tr.append($("<td>", {text: correctNumbers}));
-    $tr.append($("<td>", {text: correctPositions}));
-    $div.append($tr);
-    $(".container").append($div);  
+    $tbody.append($("<td>", { text: userInput }));
+     
+    $tbody.append($("<td>", { text: correctNumbers }));
+    
+    $tbody.append($("<td>", { text: correctPositions }));     
+  //  $tbody.append($tr);
+    $div.append($tbody);    
+    $(".history").append($div);  
   var message = 1;
 $('.message').each(function(message) {  
     $(this).floatBalls(1, 1, message);
@@ -129,6 +141,7 @@ $('.message').each(function(message) {
         var userInput = 0;
         $("#startGame").hide();
         $("#gameBoard").show();
+        $("#status").show();
 
         $("#tryIt").on("click", function(evt){
         evt.preventDefault(); // prevent Submit
@@ -154,5 +167,6 @@ $('.message').each(function(message) {
 
     }
     $("#gameBoard").hide();
+    $("#status").hide();
     $("#startGame").on("click", startGame);
  });
