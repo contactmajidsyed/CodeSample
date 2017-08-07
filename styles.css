@@ -25,6 +25,7 @@ h1 {
   text-align: center;
   font-weight: 700;
   color: #AC3931;
+  font-family:cursive;
 }
 
 h2, h3, h4 {
@@ -32,7 +33,10 @@ h2, h3, h4 {
   font-weight: 400;
   color: #AC3931;
 }
-
+input{
+    font:inherit;
+    
+}
 p {
   color: #482C3D;
   font-size: 16px;
@@ -77,7 +81,7 @@ parent {
     height: 200px;
     width: 200px;
     align-content: center;
-    background-color: orange;
+ 
     color: white;
     z-index: -9999;
     line-height: 115px;
@@ -102,14 +106,14 @@ parent {
 	color: Black; 
 }
 th {
-	background-color: SteelBlue;
+	background-color: #d59433;
 	padding: 3px; 
 	color: White; 
 	font-size: 12px;
 	font-family: Verdana; 
 }
 td {
-	background-color: SteelBlue;
+	background-color:rgba(255,4,4,0.9);
 	padding: 3px; 
 	color: White; 
 	font-size: 12px;
@@ -126,6 +130,18 @@ td {
 }
 .separate tr:last-child td:first-child {
 	border-bottom-left-radius: 10px;
+}
 
-
-
+#startGame{
+    text-align: center;
+    width:50%;
+    height: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#startGame p{
+padding-top:40%;
+}
+#startGame p :hover{
+color:white;
+}

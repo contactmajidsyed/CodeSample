@@ -3,7 +3,7 @@
         <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
         <title>Code Sample: Guess the number</title>
     </head>
     <body>
@@ -16,18 +16,38 @@
     </div>
     <div class="row">
       <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <p id="startGame" class="btn btn-default pull-right">Start Game</p>
+        <div id="startGame" class="btn btn-default pull-right"><p>Start Game<p></div>
+        <div class="instructions">        <p>
+          Intructions: Computer chooses a <b>random</b> number. It has <b>4 DISTINCT digits</b>.
+          You must <b>guess</b> it.
+          When you try a number I will tell you <b>how many digits are ok</b> and how many of them
+          are in the <b>right place</b>.
+        </p></p>
       </div>
     </div>
     <div id="gameBoard" class="row">
         <form id="form_number_submit" class="form-inline">
           <div class="form-group">
             <label for="your_number">Your number</label>
-            <input type="number" class="form-control" id="your_number" placeholder="Try to guess my number">
+            <input type="number" class="form-control" id="your_number" placeholder="Enter number">
           </div>
           <button id="tryIt" type="" class="btn btn-default">Try it!</button>
         </form>
     <div class="history">
+      <div class="message">
+        <table id="hintsTable ">
+            <thead>
+              <tr>
+                <th>Your Number</th>
+                <th>Correct Digits</th>
+                <th>Correct Positions</th>
+              </tr>
+            </thead>
+            <tbody class="entries">
+            </tbody>
+      </table> 
+      </div>
+ 
     </div>
     </div>
     </div>

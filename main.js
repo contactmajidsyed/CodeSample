@@ -2,7 +2,7 @@ $(document).ready(function () {
     function generateUniqueFourDigitRandomNumber() { 
       var numbers = [];
         while (numbers.length < 4) {
-            var newNr = (parseInt(Math.random() * 4))+1;
+            var newNr = (parseInt(Math.random() * 9))+1;
             if (numbers.indexOf(newNr) == -1) {
                 numbers.push(newNr);
             }
@@ -11,11 +11,11 @@ $(document).ready(function () {
      return parseInt(numbers.join(""));
     }
 
-function show_status(text_bold, text_normal) {
+function showStatus(text_bold, text_normal) {
     $("#status").html("<b>" + text_bold + "</b> " + text_normal);
   }    
   function game_victory() {
-    //show_status("Victory!", "You finished the game.");
+    showStatus("Victory!", "You finished the game.");
     $("#title_work").text("Victory!");
     $("#form_number_submit").hide();
   }    
@@ -107,30 +107,22 @@ function show_status(text_bold, text_normal) {
     }
 
     function addRecordToHistory(userInput, correctNumbers, correctPositions) { 
-    var $div =$('<div class="message">');
-    var $tr = $("<div>");
-    $tbody =          $(`<table id="hintsTable " class=" w3-tiny">
-            <thead>
-              <tr>
-                <th>Your Number</th>
-                <th>Correct Digits</th>
-                <th>Correct Positions</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>`);
+        $(".history").show();
+    var $div =$('.message');
+    var $tr = $("<tr class='entry'>");
+    $tbody =          $(`.entries`);
     //$tr.append($("<td>", {text: $("tr", $tbody).length + 1}));
-    $tbody.append($("<td>", { text: userInput }));
+    $tr.append($("<td>", { text: userInput }));
      
-    $tbody.append($("<td>", { text: correctNumbers }));
+    $tr.append($("<td>", { text: correctNumbers }));
     
-    $tbody.append($("<td>", { text: correctPositions }));     
-  //  $tbody.append($tr);
-    $div.append($tbody);    
-    $(".history").append($div);  
+    $tr.append($("<td>", { text: correctPositions }));     
+    $tbody.append($tr);
+    //$div.append($tbody);    
+   // $(".history").append($div);  
   var message = 1;
 $('.message').each(function(message) {  
-    $(this).floatBalls(1, 1, message);
+    $(this).floatBalls(.5, .5, message);
     message++
 });
     }
@@ -140,6 +132,7 @@ $('.message').each(function(message) {
         var answer = generateUniqueFourDigitRandomNumber();
         var userInput = 0;
         $("#startGame").hide();
+        $(".history").hide();
         $("#gameBoard").show();
         $("#status").show();
 
@@ -147,20 +140,17 @@ $('.message').each(function(message) {
         evt.preventDefault(); // prevent Submit
         userInput = parseInt($("#your_number").val());
         if (isNaN(userInput))
-        // show_status("Error:", "Enter only numbers.");
-            show_status("Error:", "Enter only numbers.");   
+            showStatus("Error:", "Enter only numbers.");   
         else if (userInput.toString().length != 4) {
-          show_status("Error:", "Enter a 4 digit number.");    
+          showStatus("Error:", "Enter a 4 digit number.");    
         }    
         else {
             if (hasDistinctDigits(userInput)) {
-                // show_status("Status:", "Try to find the good number.");
+                showStatus("Status:", "Try to find the good number.");
                 verifyNumber(userInput, answer);
-                show_status("Status:", "Try to find the good number.");
             }
             else { 
-            // show_status("Error:", "Try numbers with 4 distinct digits, please.");
-                show_status("Error:", "Try numbers with 4 distinct digits, please.");
+                showStatus("Error:", "Try numbers with 4 distinct digits, please.");
             }
             }
         });
