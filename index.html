@@ -1,23 +1,50 @@
 <html>
     <head>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="main.js"></script>
+        <script src="animations.js"></script>
+        <link rel="stylesheet" href="styles.css">
         <title>Code Sample: Guess the number</title>
     </head>
     <body>
-        <h1>Guess the number<h1>
+    <div class="container">
+    <h1>Guess the number!<h1>
+    <div class="row">
+      <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p id="status" class="small"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p id="startGame" class="btn btn-default pull-right">Start Game</p>
+      </div>
+    </div>
+    <div id="gameBoard" class="row">
         <div class="panel panel-default">
           <div class="panel-heading">History</div>
           <table id="history_table" class="table table-condensed">
             <thead>
               <tr>
                 <th>#</th>
-                <th>Your number</th>
-                <th>Good digits</th>
-                <th>Good positions</th>
+                <th>Your Number</th>
+                <th>Correct Digits</th>
+                <th>Correct Positions</th>
               </tr>
             </thead>
             <tbody>
             </tbody>
           </table>
         </div>
+
+        <form id="form_number_submit" class="form-inline">
+          <div class="form-group">
+            <label for="your_number">Your number</label>
+            <input type="number" class="form-control" id="your_number" placeholder="Try to guess my number">
+          </div>
+          <button id="tryIt" type="" class="btn btn-default">Try it!</button>
+        </form>
+    </div>
+    </div>
     </body>
+
 </html>
