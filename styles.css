@@ -94,17 +94,6 @@ parent {
     border-radius: 100px;
 }
 
-.tabelle {
-	width: 200px; border-collapse: collapse; 
-}
-.zelle{
-	padding: 3px; 
-	background-color: SkyBlue; 
-	font-family: Verdana; 
-	font-size: 12px;
-	text-align: center; 
-	color: Black; 
-}
 th {
 	background-color: #d59433;
 	padding: 3px; 
