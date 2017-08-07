@@ -4,7 +4,7 @@
  * Date 2014-11-24
  *
  * @version 1.0.0.0
- * @author Majid Syed <abdulmajid.syedz@cengage.com>
+ * @author Majid Syed <abdulmajid.syed@cengage.com>
  * @description
  */
 
