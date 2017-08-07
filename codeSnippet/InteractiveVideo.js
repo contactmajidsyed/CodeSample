@@ -1,11 +1,12 @@
 /**
  * Project Cengage Clue DevMath
  * File InteractiveVideo.js
- * Date 2014-11-24
  *
  * @version 1.0.0.0
- * @author Majid Syed <abdulmajid.syed@cengage.com>
+ * @author Majid Syed<abdulmajid.syed@cengage.com>
  * @description
+ *
+ *Updated 12/2015 to use html5 video direct without using JWPlayer.
  */
 
 var ClueSpinner = require('spin.js');
