@@ -7,7 +7,7 @@ $(document).ready(function () {
                 numbers.push(newNr);
             }
         }
-        console.log(parseInt(numbers.join("")));
+        console.log("Glad you checked -> "+parseInt(numbers.join("")));
      return parseInt(numbers.join(""));
     }
 
@@ -18,6 +18,10 @@ function showStatus(text_bold, text_normal) {
     showStatus("Victory!", "You finished the game.");
     $("#title_work").text("Victory!");
     $("#form_number_submit").hide();
+    $(".history").hide();
+    $(".instructions").hide(); 
+    $(".victory").append('<img src="./resources/images/victory.gif">') 
+      
   }    
     function verifyNumber(userInput, answer) { 
         if (userInput === answer) {

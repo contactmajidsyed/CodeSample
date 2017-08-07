@@ -1,10 +1,3 @@
-/* Colors:
-#AC3931 - red
-#E5D352 - yellow
-#D9E76C - yellow light
-#537D8D - blue
-#482C3D - purple
-*/
 
 body {
   background: #537D8D;
@@ -133,4 +126,7 @@ padding-top:40%;
 }
 #startGame p :hover{
 color:white;
+}
+#tryIt{
+    margin-top: 10px 
 }
